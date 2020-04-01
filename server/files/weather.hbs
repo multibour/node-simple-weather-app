@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+</head>
+<body>
+    <div class="main-content">
+        <h1><img src="cloudy.png" alt="cloud+sun icon"/> {{header}}</h1>
+
+        <header>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/weather">Weather</a>
+        </header>
+
+        <p>{{text}}</p>
+
+        <form>
+            <input placeholder="Enter a location" />
+            <button>Search</button>
+        </form>
+
+        <p id="paragraph1"></p>
+        <p id="paragraph2"></p>
+    </div>
+
+    <footer>
+        created by K.
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
