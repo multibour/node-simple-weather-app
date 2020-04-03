@@ -39,7 +39,8 @@ function forecast(latitude, longitude, callback){
         else if (response.body.error)
             callback(response.body.error, undefined);
         else{
-            callback(undefined, `${response.body.currently.summary} and ${response.body.currently.temperature} Celsius degrees. ${response.body.currently.precipProbability*100}% chance of precipitation.`);
+            callback(undefined, `${response.body.currently.summary} and ${response.body.currently.temperature} Celsius degrees.`
+                + ` ${response.body.currently.precipProbability*100}% chance of precipitation and ${response.body.currently.humidity*100}% humidity.`);
         }
     });
 }
