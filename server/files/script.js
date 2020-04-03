@@ -13,7 +13,11 @@ document.querySelector('form').addEventListener('submit', (event) => {
     const address = document.querySelector('input').value;
 
     fetch(`${window.location.origin}/weatherapp?address=${encodeURI(address)}`)
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok)
+                return response.json();
+            throw new Error('Request failed.');
+        })
         .then(data => {
             if (data.error)
                 paragraph1.textContent = data.error;
@@ -21,6 +25,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
                 paragraph1.textContent = data.location;
                 paragraph2.textContent = data.forecast;
             }
-        });
+        })
+        .catch( err => console.log(err.message) );
 });
 
