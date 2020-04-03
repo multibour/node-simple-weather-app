@@ -1,6 +1,6 @@
 # Weather App
 
-The aim of the project is to test and explore basic Node.js funtionalities. It uses LocationIQ and DarkSky APIs for data retrieval.
+The aim of the project is to test and explore some of the basic Node.js funtionalities. It uses LocationIQ and DarkSky APIs for data retrieval.
 
 The user enters an address, the app retrieves the coordinates of the address using LocationIQ. 
 Then, the app retrieves the current weather of the given location using the retrieved coordinates and DarkSky.
