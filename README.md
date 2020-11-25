@@ -13,3 +13,6 @@ You may find the HTML templates and static files under **server/files**
 
 You can access the website and try it out [here](https://atukalp-weather-app.herokuapp.com/weather).
 
+## TODO
+
+Save API keys as environment variables (although they are unimportant and will still be visible in the commits, it is bad practice).
